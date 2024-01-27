@@ -1,14 +1,36 @@
 @slajd_26
 Feature: User Login
 
-  @login
-  Scenario Outline: Successful login for user
+  Scenario: Successful login for user testestesttest
         Given I am on log in page
-        When I fill email field with: '<user_email>' and password field with: '<user_password>'
+        When I fill email field with testestesttest@cazlq.com data
+        And I fill password field with razdwatrzy123 data
         And I click on 'Login' button
-        Then <user_name> is visible on account page
+        Then testestesttest is visible on account page
 
-  Examples:
-    |user_email                     |user_password |user_name           |
-    |hhheglgtvvtmkydmyw@cazlq.com   |Start123#111  |hhheglgtvvtmkydmyw  |
-    |testestesttest@cazlq.com       |razdwatrzy123 |testestesttest      |
+  Scenario: Login with wrong username
+        Given I am on log in page
+        When I fill email field with hhhegl@cazlq.com data
+        And I fill password field with Start123#111 data
+        And I click on 'Login' button
+        Then error: 'A user could not be found with this email address.' is visible on login page
+
+  Scenario: Login with wrong password
+        Given I am on log in page
+        When I fill email field with testestesttest@cazlq.com data
+        And I fill password field with Start123#111 data
+        And I click on 'Login' button
+        Then error: 'The password you entered for the username testestesttest@cazlq.com is incorrect. Lost your password?' is visible on login page
+
+ Scenario: Login without email
+        Given I am on log in page
+        When I fill password field with Start123#111 data
+        And I click on 'Login' button
+        Then error: 'Username is required.' is visible on login page
+
+ Scenario: Login without password
+        Given I am on log in page
+        When I fill email field with testestesttest@cazlq.com data
+        And I click on 'Login' button
+        Then error: 'The password field is empty.' is visible on login page
+

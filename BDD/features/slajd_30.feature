@@ -1,4 +1,4 @@
-@slajd_18
+@slajd_30
 Feature: User Login
 
 """  In order to access my personal account and individual features of the application
@@ -18,4 +18,4 @@ Feature: User Login
         When I fill email field with hhheglgtvvtmkydmyw@cazlq.com data
         And I fill password field with Start123#111 data
         And I click on 'Login' button
-        Then hhheglgtvvtmkydmyw is visible on account page
+        Then hhheglgtvvtmkydmyw is visible on account pag30

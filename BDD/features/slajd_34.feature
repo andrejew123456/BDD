@@ -1,11 +1,10 @@
-@slajd_21
+@slajd_34
 Feature: User Login
 
-  @login @critical
-  Scenario Outline: Successful login for user testestesttest
+  @login
+  Scenario Outline: Successful login for user
         Given I am on log in page
-        When I fill email field with <user_email> data
-        And I fill password field with <user_password> data
+        When I fill email field with: '<user_email>' and password field with: '<user_password>'
         And I click on 'Login' button
         Then <user_name> is visible on account page
 

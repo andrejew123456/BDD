@@ -1,10 +1,5 @@
 from selenium import webdriver
-# import chromedriver_autoinstaller
 from webdriver_manager.chrome import ChromeDriverManager
-
-# driver = webdriver.Chrome(ChromeDriverManager().install())
-
-# chromedriver_autoinstaller.install()
 
 def before_scenario(context, scenario):
     # context.driver = webdriver.Chrome(ChromeDriverManager().install())

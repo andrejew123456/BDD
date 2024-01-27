@@ -1,4 +1,20 @@
-@slajd_20
+#Opis Zadania:
+#Stwórz scenariusz BDD testujący funkcję logowania, która odrzuca próby logowania z nieprawidłowymi danymi. Scenariusz powinien zawierać definicje kroków w Gherkin oraz ich implementację w Pythonie przy użyciu frameworka Behave.
+#błędny email
+#błędne hasło
+#brak email
+#brak hasła
+#
+#Krok 1: Plik Feature Gherkin (logowanie.feature)
+#Utwórz plik logowanie.feature w folderze features
+#
+#Krok 2: Implementacja Kroku w Pythonie (logowanie_steps.py)
+#W folderze features/steps utwórz plik logowanie_steps.py z implementacjami kroków
+#
+#Krok 3: Uruchom testy jedna z podanych metod
+
+
+@slajd_25
 Feature: User Login
 
   Scenario: Successful login for user testestesttest
@@ -33,4 +49,3 @@ Feature: User Login
         When I fill email field with testestesttest@cazlq.com data
         And I click on 'Login' button
         Then error: 'The password field is empty.' is visible on login page
-

@@ -1,7 +1,7 @@
-@slajd_22
+@slajd_28
 Feature: User Login
 
-  @login
+  @login @critical @test @prio_1 @regression @positive @user_email
   Scenario Outline: Successful login for user testestesttest
         Given I am on log in page
         When I fill email field with <user_email> data
