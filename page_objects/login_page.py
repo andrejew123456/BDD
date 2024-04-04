@@ -14,23 +14,7 @@ class LoginPage(base.BasePage):
         self.email_field = Locator(
             driver=self.driver,
             selector="[id='username']",
-        )
-        self.password_field = Locator(
-            driver=self.driver,
-            selector="[id='password']",
-        )
-        self.login_button = Locator(
-            driver=self.driver,
-            selector="[name='login']",
-        )
-        self.account_name = Locator(
-            driver=self.driver,
-            selector="[class='woocommerce-MyAccount-content']",
-        )
-        self.error_name = Locator(
-            driver=self.driver,
-            selector="[class='woocommerce-error'] li",
-        )
+        )        
         self.empty_password_error = Locator(
             driver=self.driver,
             selector="//div[@class = 'erreur']",
