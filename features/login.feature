@@ -8,9 +8,10 @@ Feature: User Login
 #  Background: User is on the Login Page
 #    Given The user is on the login page
 
-#  @login
+  @login123
   Scenario: login: Successful login
-        Given I am on log in page
+        Given I am on login page
+        And I accept cookies consent
         When I fill email field with correct data
         And I fill password field with correct data
         And I click on 'Login' button

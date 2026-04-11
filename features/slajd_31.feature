@@ -8,14 +8,15 @@ Feature: User Login
 
   Scenario: slajd_31: Successful login for user testestesttest
         Given I am on log in page
-        When I fill email field with testestesttest@cazlq.com data
-        And I fill password field with razdwatrzy123 data
+        And I accept cookies consent
+        When I fill email field with "testestesttest@cazlq.com" data
+        And I fill password field with "razdwatrzy123" data
         And I click on 'Login' button
-        Then testestesttest is visible on account page
+        Then "testestesttest" is visible on account page
 
   Scenario: slajd_31: Successful login
         Given I am on log in page
-        When I fill email field with hhheglgtvvtmkydmyw@cazlq.com data
-        And I fill password field with Start123#111 data
+        When I fill email field with "hhheglgtvvtmkydmyw@cazlq.com" data
+        And I fill password field with "Start123#111" data
         And I click on 'Login' button
-        Then hhheglgtvvtmkydmyw is visible on account page
+        Then "hhheglgtvvtmkydmyw" is visible on account page
